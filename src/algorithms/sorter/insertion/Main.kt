@@ -22,14 +22,14 @@ object InsertionSortTester {
         println("Test Insertion Sort")
         val list = generateRandomElements(10, 100)
         println("Unsorted: $list, size: ${list.size}")
-        insertionSort(list, true)
+        insertionSorter(list, true)
         println("Ascending sort: $list, size: ${list.size}")
-        insertionSort(list, false)
+        insertionSorter(list, false)
         println("Descending sort: $list, size: ${list.size}")
     }
 }
 
-fun insertionSort(list: MutableList<Element>, isAscending: Boolean = true): MutableList<Element> {
+fun insertionSorter(list: MutableList<Element>, isAscending: Boolean = true): MutableList<Element> {
     for (j in 1 until list.size) {
         val currentElem = list[j]
         for (i in 0 until j) {
